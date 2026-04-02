@@ -1,0 +1,17 @@
+# Credentials and secrets
+.env
+*.credentials
+*passwords*
+*secrets*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
