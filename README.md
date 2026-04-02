@@ -66,3 +66,7 @@ Copy `.env.example` to `.env` and fill in your values.
 
 - [Session 01 — GLaDOS Setup](docs/session-01-glados-setup.md)
 - [Session 02 — Aperture Setup + First Attack](docs/session-02-aperture-setup.md)
+
+## Attack Labs
+
+- [Attack 01 — vsftpd 2.3.4 Backdoor](docs/attack-01-vsftpd-metasploitable.md)
