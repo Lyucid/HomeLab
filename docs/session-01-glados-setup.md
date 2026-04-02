@@ -425,7 +425,7 @@ sudo ufw status
 
 ## Session Status
 
-### GLaDOS (10.0.10.10) ✅
+### GLaDOS (10.0.10.10)
 | Service | Status |
 |---|---|
 | Ubuntu Server 24.04 | Running |
@@ -437,7 +437,7 @@ sudo ufw status
 | UFW | Active — all ports configured |
 | SSH | Accessible via VPN |
 
-### TZ370 ✅
+### TZ370
 | Feature | Status |
 |---|---|
 | WAN | Connected |
@@ -447,7 +447,7 @@ sudo ufw status
 | Block lab-to-home rule | Active |
 | SSL-VPN | Active — watcher user created |
 
-### SSL-VPN ✅
+### SSL-VPN
 - NetExtender installed on Windows PC
 - VPN connects successfully
 - SSH to GLaDOS working over VPN

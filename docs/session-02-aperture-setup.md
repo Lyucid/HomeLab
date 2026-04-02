@@ -314,7 +314,7 @@ sysinfo → metasploitable.localdomain — Ubuntu Linux 2.6.24
 
 ## Session Status
 
-### Aperture (10.0.10.20) ✅
+### Aperture (10.0.10.20)
 | Service | Status |
 |---|---|
 | Proxmox VE | Running — https://10.0.10.20:8006 |
@@ -323,12 +323,12 @@ sysinfo → metasploitable.localdomain — Ubuntu Linux 2.6.24
 | Wazuh Agent | Running — registered as agent 001 |
 | Suricata (vmbr0) | Running — feeding into Wazuh agent |
 
-### Kali (VM 100) ✅
+### Kali (VM 100)
 | Service | Status |
 |---|---|
 | Wazuh Agent | Running — registered as agent 002 |
 
-### Wazuh Dashboard ✅
+### Wazuh Dashboard
 - 3 active agents: glados, aperture, kali
 - MITRE ATT&CK detections firing
 - 445 alerts generated in first attack exercise
