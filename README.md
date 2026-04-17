@@ -21,7 +21,7 @@ Internet → ISP Gateway → Home Router (<HOME_SUBNET>/24)
 | Machine | Specs | Role |
 |---|---|---|
 | ThinkCentre M70Q | i7-10700T, 32GB DDR4, 1TB SSD | SOC / SIEM (GLaDOS) |
-| ThinkCentre M70Q | i7-10700T, 16GB DDR4, 500GB SSD | Proxmox / CTF (Aperture) |
+| ThinkCentre M70Q | i7-10700T, 32GB DDR4, 500GB SSD | Proxmox / CTF (Aperture) |
 | Raspberry Pi 5 | 8GB | Home Assistant OS |
 | Raspberry Pi 4 | 4GB | Pi-hole, Uptime Kuma, Node-RED |
 | SonicWall TZ370 | Gen 7 | Firewall / Gateway |
@@ -40,6 +40,7 @@ Internet → ISP Gateway → Home Router (<HOME_SUBNET>/24)
 - Proxmox VE (Trixie)
 - Kali Linux VM (ID 100)
 - Metasploitable 2 VM (ID 101)
+- REMnux VM (ID 102) (Malware Analysis)
 - Suricata on vmbr0 (VM-to-VM monitoring)
 - Wazuh Agent
 
@@ -51,6 +52,7 @@ Internet → ISP Gateway → Home Router (<HOME_SUBNET>/24)
 - [x] Aperture — Proxmox + Kali VM + Metasploitable VM
 - [x] Wazuh agents on Aperture and Kali
 - [x] First attack/detect exercise complete
+- [x] REMnux VM deployed on Aperture
 - [ ] Graylog + TheHive on GLaDOS
 - [ ] Pi 5 + Pi 4 setup
 - [ ] Wazuh agents on Pis
@@ -66,6 +68,7 @@ Copy `.env.example` to `.env` and fill in your values.
 
 - [Session 01 - GLaDOS Setup](docs/Session%2001%20-%20GLaDOS%20Setup.md)
 - [Session 02 - Aperture Setup](docs/Session%2002%20-%20Aperture%20Setup.md)
+- [Session 03 - REMnux Setup](docs/Session%2003%20-%20REMnux%20Setup.md)
 
 ## Attack Labs
 
