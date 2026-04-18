@@ -78,3 +78,4 @@ Copy `.env.example` to `.env` and fill in your values.
 ## Attack Labs
 
 - [Attack 01 - vsftpd Metasploitable](docs/Attack%2001%20-%20vsftpd%20Metasploitable.md)
+- [Attack 02 - Kerberoasting AD Lab](docs/Attack%2002%20-%20Kerberoasting%20AD%20Lab.md)
