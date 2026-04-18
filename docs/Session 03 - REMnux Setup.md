@@ -154,6 +154,44 @@ remnux upgrade
 
 ---
 
+## Phase 6 — SSH Server
+
+REMnux does not have SSH enabled by default. Install and enable it:
+
+```bash
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+
+SSH in from Windows PC:
+```powershell
+ssh remnux@10.0.10.148
+```
+
+> **Note:** REMnux IP is assigned via DHCP — confirm current IP with `ip a show enp6s18` in the Proxmox console if SSH fails.
+
+---
+
+## Phase 7 — Wazuh Agent on REMnux
+
+Deploy via Wazuh dashboard (`https://10.0.10.10` → Agents → Deploy new agent → Linux):
+
+- Agent name: `remnux`
+- Manager IP: `10.0.10.10`
+
+Copy the generated install command and run it on REMnux, then:
+
+```bash
+sudo systemctl enable wazuh-agent
+sudo systemctl start wazuh-agent
+sudo systemctl status wazuh-agent
+```
+
+Snapshot taken after Wazuh agent confirmed active: `wazuh-agent-installed`
+
+---
+
 ## Session Status
 
 ### Aperture (10.0.10.20)
@@ -162,9 +200,15 @@ remnux upgrade
 | Proxmox VE | Running — https://10.0.10.20:8006 |
 | Kali Linux VM (ID 100) | Running — clean-install snapshot taken |
 | Metasploitable VM (ID 101) | Running — IP 10.0.10.106 |
-| REMnux VM (ID 102) | Running — clean-install snapshot taken |
-| Wazuh Agent | Running |
+| REMnux VM (ID 102) | Running — wazuh-agent-installed snapshot taken |
+| Wazuh Agent (Aperture host) | Running |
 | Suricata (vmbr0) | Running |
+
+### Wazuh Active Agents
+| Agent | Status |
+|---|---|
+| aperture | Active |
+| remnux | Active |
 
 ---
 
@@ -174,6 +218,7 @@ remnux upgrade
 - **Proxmox does not auto-attach imported disks** — always verify with `qm config <vmid>` after import; disk will show as `unused0` until manually attached
 - **REMnux netplan references ens33 by default** — VMware interface name, not correct for Proxmox VirtIO; update to `enp6s18`
 - **remnux upgrade may fail on first run** — Salt state failures are common on first upgrade; reboot and rerun to complete
+- **REMnux does not ship with SSH enabled** — must install openssh-server manually before remote access is possible
 - **i7-10700T RAM runs at 2933 MHz max** — platform limitation, not configurable in ThinkCentre BIOS
 
 ---

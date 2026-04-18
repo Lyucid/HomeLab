@@ -41,6 +41,8 @@ Internet → ISP Gateway → Home Router (<HOME_SUBNET>/24)
 - Kali Linux VM (ID 100)
 - Metasploitable 2 VM (ID 101)
 - REMnux VM (ID 102) (Malware Analysis)
+- DC01 VM (ID 103) — Windows Server 2022, aperture.science Domain Controller
+- CHELL VM (ID 104) — Windows 11 Pro, domain-joined workstation
 - Suricata on vmbr0 (VM-to-VM monitoring)
 - Wazuh Agent
 
@@ -53,6 +55,8 @@ Internet → ISP Gateway → Home Router (<HOME_SUBNET>/24)
 - [x] Wazuh agents on Aperture and Kali
 - [x] First attack/detect exercise complete
 - [x] REMnux VM deployed on Aperture
+- [x] Windows AD lab deployed (aperture.science domain)
+- [x] Wazuh agents on DC01 and CHELL
 - [ ] Graylog + TheHive on GLaDOS
 - [ ] Pi 5 + Pi 4 setup
 - [ ] Wazuh agents on Pis
@@ -69,6 +73,7 @@ Copy `.env.example` to `.env` and fill in your values.
 - [Session 01 - GLaDOS Setup](docs/Session%2001%20-%20GLaDOS%20Setup.md)
 - [Session 02 - Aperture Setup](docs/Session%2002%20-%20Aperture%20Setup.md)
 - [Session 03 - REMnux Setup](docs/Session%2003%20-%20REMnux%20Setup.md)
+- [Session 04 - Windows AD Lab](docs/Session%2004%20-%20Windows%20AD%20Lab.md)
 
 ## Attack Labs
 
